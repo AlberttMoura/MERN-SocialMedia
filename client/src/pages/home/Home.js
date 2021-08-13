@@ -1,8 +1,8 @@
+import Topbar from "../../components/topbar/Topbar"
+
 function Home() {
     return (
-        <div>
-            this is homepage
-        </div>
+        <Topbar/>
     )
 }
 

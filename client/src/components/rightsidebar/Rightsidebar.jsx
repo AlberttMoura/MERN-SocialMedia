@@ -1,4 +1,6 @@
 import "./rightsidebar.css"
+import {Users} from "../../dummyData"
+import Online from "../online/Online"
 
 function Rightsidebar() {
     return (
@@ -11,48 +13,9 @@ function Rightsidebar() {
                 <img src="/assets/general/fiatad.jpg" alt="" className="rightsidebarAd" />
                 <h4 className="rightsidebarTitle">Online Friends</h4>
                 <ul className="rightsidebarFriendList">
-                    <li className="rightsidebarFriend">
-                        <div className="rightsidebarProfileImgContainer">
-                            <img src="/assets/person/person3.jpg" alt="" className="rightsidebarProfileImg" />
-                            <span className="rightsidebarOnline"></span>
-                        </div>
-                        <span className="rightsidebarUsername">Albert Einstein</span>
-                    </li>
-                    <li className="rightsidebarFriend">
-                        <div className="rightsidebarProfileImgContainer">
-                            <img src="/assets/person/person3.jpg" alt="" className="rightsidebarProfileImg" />
-                            <span className="rightsidebarOnline"></span>
-                        </div>
-                        <span className="rightsidebarUsername">Albert Einstein</span>
-                    </li>
-                    <li className="rightsidebarFriend">
-                        <div className="rightsidebarProfileImgContainer">
-                            <img src="/assets/person/person3.jpg" alt="" className="rightsidebarProfileImg" />
-                            <span className="rightsidebarOnline"></span>
-                        </div>
-                        <span className="rightsidebarUsername">Albert Einstein</span>
-                    </li>
-                    <li className="rightsidebarFriend">
-                        <div className="rightsidebarProfileImgContainer">
-                            <img src="/assets/person/person3.jpg" alt="" className="rightsidebarProfileImg" />
-                            <span className="rightsidebarOnline"></span>
-                        </div>
-                        <span className="rightsidebarUsername">Albert Einstein</span>
-                    </li>
-                    <li className="rightsidebarFriend">
-                        <div className="rightsidebarProfileImgContainer">
-                            <img src="/assets/person/person3.jpg" alt="" className="rightsidebarProfileImg" />
-                            <span className="rightsidebarOnline"></span>
-                        </div>
-                        <span className="rightsidebarUsername">Albert Einstein</span>
-                    </li>
-                    <li className="rightsidebarFriend">
-                        <div className="rightsidebarProfileImgContainer">
-                            <img src="/assets/person/person3.jpg" alt="" className="rightsidebarProfileImg" />
-                            <span className="rightsidebarOnline"></span>
-                        </div>
-                        <span className="rightsidebarUsername">Albert Einstein</span>
-                    </li>
+                    {Users.map(u=>(
+                        <Online key={u.id} user={u}/>
+                    ))}
                 </ul>
             </div>
         </div>

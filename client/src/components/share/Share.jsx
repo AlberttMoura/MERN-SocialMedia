@@ -7,14 +7,14 @@ function Share() {
             <div className="shareWrapper">
                 <div className="shareTop">
                     <img src="/assets/person/person1.jpg" alt="" className="shareProfileImg" />
-                    <input placeholder="What's in your mind?" className="shareInput" />
+                    <input placeholder="O que você está pensando hoje?" className="shareInput" />
                 </div>
                 <hr className="shareHr" />
                 <div className="shareBottom">
                     <div className="shareOptions">
                         <div className="shareOption">
                             <PermMedia htmlColor="Tomato" className="shareIcon"/>
-                            <span className="shareOptionText">Photo or Video</span>
+                            <span className="shareOptionText">Fotos ou Vídeos</span>
                         </div>
                     </div>
                     <div className="shareOptions">
@@ -35,7 +35,7 @@ function Share() {
                             <span className="shareOptionText">Humor</span>
                         </div>
                     </div>
-                    <button className="shareButton">Share</button>
+                    <button className="shareButton">Publicar</button>
                 </div>
             </div>
         </div>

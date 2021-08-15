@@ -1,5 +1,7 @@
 import "./leftsidebar.css"
 import {RssFeed, Chat, PlayCircleFilled, Group, Work, Event, School} from "@material-ui/icons"
+import {Users} from "../../dummyData"
+import CloseFriend from "../closeFriend/CloseFriend"
 
 function Leftsidebar() {
     return (
@@ -38,26 +40,9 @@ function Leftsidebar() {
                 <button className="leftsidebarButton">Mostrar Mais</button>
                 <hr className="leftsidebarHr"/>
                 <ul className="leftsidebarFriendList">
-                    <li className="leftsidebarFriend">
-                        <img src="/assets/person/person6.jpg" alt="" className="leftsidebarFriendImg" />
-                        <span className="leftsidebarFriendName">Hiago Lira</span>
-                    </li>
-                    <li className="leftsidebarFriend">
-                        <img src="/assets/person/person7.jpg" alt="" className="leftsidebarFriendImg" />
-                        <span className="leftsidebarFriendName">Sarah Mendes</span>
-                    </li>
-                    <li className="leftsidebarFriend">
-                        <img src="/assets/person/person8.jpg" alt="" className="leftsidebarFriendImg" />
-                        <span className="leftsidebarFriendName">Francis Bacon</span>
-                    </li>
-                    <li className="leftsidebarFriend">
-                        <img src="/assets/person/person9.jpg" alt="" className="leftsidebarFriendImg" />
-                        <span className="leftsidebarFriendName">Airton Senna</span>
-                    </li>
-                    <li className="leftsidebarFriend">
-                        <img src="/assets/person/person10.jpg" alt="" className="leftsidebarFriendImg" />
-                        <span className="leftsidebarFriendName">Epaminondas da Silva</span>
-                    </li>
+                    {Users.map(u=>(
+                        <CloseFriend key={u.id} user={u}/>
+                    ))}
                 </ul>
             </div>
         </div>
